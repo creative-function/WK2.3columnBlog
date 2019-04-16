@@ -17,6 +17,9 @@ TABLE OF CONTENTS:
 @import 'reset';
 
 
+$primaryColor: #093a58;
+$secondaryColor: #3acec2;
+
 /* 1. Main Layout ================================= */
 
 
@@ -36,23 +39,6 @@ body{
 /* 2. Content ================================= */
 
 
-
-h2, a{
-	color: #093a58;
-}
-
-p{
-	font-size: .9em;
-}
-
-h2{
-	font-size: 1.5em;
-}
-
-img{
-	max-width: 100%;
-}
-
 h1{
 	font-size: 1.35em;
 	font-weight: bold;
@@ -60,42 +46,69 @@ h1{
 	margin: 20px 0 30px;
 }
 
-nav li{
-	text-transform: uppercase;
-	text-align: center;
-	margin: 20px 0;
-	
+h2, a{
+	color:$primaryColor
 }
 
-nav li a{
-	color: #3acec2;
+h2{
+	font-size: 1.5em;
 }
+
+h4{
+	font-weight: bold;
+	margin:20px 0 20px 0;
+}
+
+p{
+	font-size: .9em;
+}
+
+
+img{
+	max-width: 100%;
+}
+
+
+
 
 .main-header{
 	display: flex;
 	flex-direction: column;
+
+	nav li{
+		text-transform: uppercase;
+		text-align: center;
+		margin: 20px 0;
+		
+	}
+	
+	nav li a{
+		color: $secondaryColor;
+	}
 }
 
 .banner{
-	background: #3acec2;
+	// background: $secondaryColor;
 	text-align: center;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
+
+	>img{
+		width: 190px;
+	}
+
+	.headline{
+		color: #fff;
+		margin: 30px;
+		font-weight: bold;
+	}
+	
+	.tagline{
+		color: #fff;
+	}
 }
 
-.banner img{
-	width: 190px;
-}
 
-.headline{
-	color: #fff;
-	margin: 30px;
-	font-weight: bold;
-}
-
-.tagline{
-	color: #fff;
-}
 
 .col{
 	background: #d9e4ea;
@@ -104,19 +117,26 @@ nav li a{
 	margin: 0 .5em .8em;
 }
 
+.box-description{
+	margin:20px;
+
+	.features{
+		list-style: disc;
+		margin-top:10px;
+	}
+}
 .button{
-	background: #3acec2;
+	background: $secondaryColor;
 	color: #fff;
 	padding: 15px;
 	border-radius:7px;
-	margin-top: 10px; 
+	margin: 20px; 
 }
 
 footer{
 	background: #d9e4ea;
 	text-align: center;
 	padding: 30px;
-	margin-top: 40px;
 }
 
 
