@@ -15,10 +15,7 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
-
-
-$primaryColor: #093a58;
-$secondaryColor: #3acec2;
+@import 'variables';
 
 /* 1. Main Layout ================================= */
 
@@ -30,8 +27,7 @@ $secondaryColor: #3acec2;
 }
 
 body{
-	font-family: 'Varela Round', sans serif;
-	color: #3a3a3a;
+	font-family: 'Helvetica', sans serif;
 	line-height: 1.6;
 }
 
@@ -46,7 +42,7 @@ h1{
 	margin: 20px 0 30px;
 }
 
-h2, a{
+a{
 	color:$primaryColor
 }
 
@@ -79,12 +75,13 @@ img{
 		text-transform: uppercase;
 		text-align: center;
 		margin: 20px 0;
+		color: $primaryColor;
 		
+		> li:hover{
+			background-color: $secondaryColor;
+		}
 	}
 	
-	nav li a{
-		color: $secondaryColor;
-	}
 }
 
 .banner{
@@ -100,40 +97,58 @@ img{
 	}
 
 	.headline{
-		color: #fff;
+		color:white;
 		margin: 30px;
 		font-weight: bold;
+		// background-color: white;
 	}
 	
-	.tagline{
-		color: #fff;
-	}
 }
 
 
 
 .col{
-	background: #d9e4ea;
+	background: #c2af04;
 	padding: 1em;
 	border-radius: 5px;
 	margin: 0 .5em .8em;
-}
+	
+	.box-title{
+		color: $primaryColor;
+		font-size: 2rem;
+		text-align: center;
 
-.box-description{
-	margin:20px;
+	}
+	
 
-	.features{
-		list-style: disc;
-		margin-top:10px;
+	.box-description{
+		margin:20px;
+		
+		.pricing{
+			@extend .box-title;
+			color: $secondaryColor;
+	
+		}
+
+		.features{
+			list-style: disc;
+			margin-top:10px;
+		}
+	}
+	.button{
+		background: $primaryColor;
+		color: #fff;
+		padding: 15px;
+		border-radius:7px;
+		
 	}
 }
-.button{
-	background: $secondaryColor;
-	color: #fff;
-	padding: 15px;
-	border-radius:7px;
-	margin: 20px; 
+
+.highlighted{
+
+	box-shadow: 0px 10px 15px $secondaryColor;
 }
+
 
 footer{
 	background: #d9e4ea;
