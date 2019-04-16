@@ -1,0 +1,157 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+@import 'reset';
+
+
+/* 1. Main Layout ================================= */
+
+
+
+*{ /*applies to everything to the page*/
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Varela Round', sans serif;
+	color: #3a3a3a;
+	line-height: 1.6;
+}
+
+
+/* 2. Content ================================= */
+
+
+
+h2, a{
+	color: #093a58;
+}
+
+p{
+	font-size: .9em;
+}
+
+h2{
+	font-size: 1.5em;
+}
+
+img{
+	max-width: 100%;
+}
+
+h1{
+	font-size: 1.35em;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0 30px;
+}
+
+nav li{
+	text-transform: uppercase;
+	text-align: center;
+	margin: 20px 0;
+	
+}
+
+nav li a{
+	color: #3acec2;
+}
+
+.main-header{
+	display: flex;
+	flex-direction: column;
+}
+
+.banner{
+	background: #3acec2;
+	text-align: center;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
+}
+
+.banner img{
+	width: 190px;
+}
+
+.headline{
+	color: #fff;
+	margin: 30px;
+	font-weight: bold;
+}
+
+.tagline{
+	color: #fff;
+}
+
+.col{
+	background: #d9e4ea;
+	padding: 1em;
+	border-radius: 5px;
+	margin: 0 .5em .8em;
+}
+
+.button{
+	background: #3acec2;
+	color: #fff;
+	padding: 15px;
+	border-radius:7px;
+	margin-top: 10px; 
+}
+
+footer{
+	background: #d9e4ea;
+	text-align: center;
+	padding: 30px;
+	margin-top: 40px;
+}
+
+
+@media screen and (min-width: 768px){
+
+	.row, .main-header, nav ul{
+		display: flex;
+	}
+
+	.row{
+		margin: 0 1.5em;
+	}
+	.main-header{
+		align-items: center;
+	}
+
+	.col{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.button{
+		margin-top: auto;
+	}
+
+	nav ul li{
+		padding: 20px;
+	}
+}
+
+@media screen and (min-width: 1220px){
+
+	.main-header {
+    flex-direction: row;
+    justify-content: space-around;
+	}
+}
