@@ -43,7 +43,7 @@ h1{
 }
 
 a{
-	color:$primaryColor
+	color:$primaryColor;
 }
 
 h2{
@@ -71,16 +71,18 @@ img{
 	display: flex;
 	flex-direction: column;
 
-	nav li{
+	.main-nav{
 		text-transform: uppercase;
 		text-align: center;
 		margin: 20px 0;
 		color: $primaryColor;
-		
-		> li:hover{
-			background-color: $secondaryColor;
+	
+		li:hover{
+			color:$backgroundColor;
+			background: $primaryColor;
 		}
 	}
+
 	
 }
 
@@ -108,7 +110,7 @@ img{
 
 
 .col{
-	background: #c2af04;
+	background: $backgroundColor;
 	padding: 1em;
 	border-radius: 5px;
 	margin: 0 .5em .8em;
