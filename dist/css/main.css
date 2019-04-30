@@ -1,2 +1,219 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{-webkit-box-sizing:border-box;box-sizing:border-box;text-decoration:none}body{font-family:'Helvetica', sans serif;line-height:1.6}h1{font-size:1.35em;font-weight:bold;text-align:center;margin:20px 0 30px}a{color:#093a58}h2{font-size:1.5em}h4{font-weight:bold;margin:20px 0 20px 0}p{font-size:.9em}img{max-width:100%}.main-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.main-header .main-nav{text-transform:uppercase;text-align:center;margin:20px 0;color:#093a58}.main-header .main-nav li:hover{color:#c2af04;background:#093a58}.banner{background-image:url(/dist/img/abstract_bkgrnd.jpg);background-size:cover;text-align:center;padding:3.2em 0;margin-bottom:48px}.banner>img{width:190px}.banner .headline{color:white;margin:30px;font-weight:bold}.col{background:#c2af04;padding:1em;border-radius:5px;margin:0 .5em .8em}.col .box-description .pricing,.col .box-title{color:#093a58;font-size:2rem;text-align:center}.col .box-description{margin:20px}.col .box-description .pricing{color:#177499}.col .box-description .features{list-style:disc;margin-top:10px}.col .button{background:#093a58;color:#fff;padding:15px;border-radius:7px}.highlighted{-webkit-box-shadow:0px 10px 15px #177499;box-shadow:0px 10px 15px #177499}footer{background:#c2af04;text-align:center;padding:30px}@media screen and (min-width:768px){.main-header,.row,nav ul{display:-webkit-box;display:-ms-flexbox;display:flex}.row{margin:0 1.5em}.main-header{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.col{-webkit-box-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.button{margin-top:auto}nav ul li{padding:20px}}@media screen and (min-width:1220px){.main-header{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:distribute;justify-content:space-around}}
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	/*applies to everything to the page*/
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Helvetica', sans serif;
+	line-height: 1.6;
+}
+
+/* 2. Content ================================= */
+h1 {
+	font-size: 1.35em;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0 30px;
+}
+
+a {
+	color: #093a58;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+}
+
+p {
+	font-size: .9em;
+}
+
+img {
+	max-width: 100%;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header .main-nav {
+	text-transform: uppercase;
+	text-align: center;
+	margin: 20px 0;
+	color: #093a58;
+}
+
+.main-header .main-nav li:hover {
+	color: #c2af04;
+	background: #093a58;
+}
+
+.banner {
+	background-image: url(/dist/img/abstract_bkgrnd.jpg);
+	background-size: cover;
+	text-align: center;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
+}
+
+.banner > img {
+	width: 190px;
+}
+
+.banner .headline {
+	color: white;
+	margin: 30px;
+	font-weight: bold;
+}
+
+.col {
+	background: #c2af04;
+	padding: 1em;
+	border-radius: 5px;
+	margin: 0 .5em .8em;
+}
+
+.col .box-title, .col .box-description .pricing {
+	color: #093a58;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.col .box-description {
+	margin: 20px;
+}
+
+.col .box-description .pricing {
+	color: #177499;
+}
+
+.col .box-description .features {
+	list-style: disc;
+	margin-top: 10px;
+}
+
+.col .button {
+	background: #093a58;
+	color: #fff;
+	padding: 15px;
+	border-radius: 7px;
+}
+
+.highlighted {
+	box-shadow: 0px 10px 15px #177499;
+}
+
+footer {
+	background: #c2af04;
+	text-align: center;
+	padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	.row, .main-header, nav ul {
+		display: flex;
+	}
+	.row {
+		margin: 0 1.5em;
+	}
+	.main-header {
+		align-items: center;
+	}
+	.col {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.button {
+		margin-top: auto;
+	}
+	nav ul li {
+		padding: 20px;
+	}
+}
+
+@media screen and (min-width: 1220px) {
+	.main-header {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
 /*# sourceMappingURL=main.css.map */
