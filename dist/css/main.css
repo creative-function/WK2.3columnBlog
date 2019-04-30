@@ -77,6 +77,8 @@ table {
 body {
 	font-family: 'Helvetica', sans serif;
 	line-height: 1.6;
+	background-image: linear-gradient(to right, rgba(191, 168, 37, 0.756) 0%, #fae8ad 100%), url("w3css.gif");
+	background-blend-mode: lighten;
 }
 
 /* 2. Content ================================= */
@@ -111,6 +113,7 @@ img {
 .main-header {
 	display: flex;
 	flex-direction: column;
+	background-color: white;
 }
 
 .main-header .main-nav {
@@ -126,21 +129,51 @@ img {
 }
 
 .banner {
-	background-image: url(/dist/img/abstract_bkgrnd.jpg);
+	background-image: url("/dist/img/abstract_bkgrnd.jpg");
 	background-size: cover;
 	text-align: center;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
 }
 
-.banner > img {
+.banner .company-logo {
+	transform: rotate(-37deg);
+	transition-delay: 0.5s;
+	transition-duration: .5s;
+}
+
+.banner .company-logo img {
 	width: 190px;
 }
 
-.banner .headline {
-	color: white;
-	margin: 30px;
-	font-weight: bold;
+.banner .headlines {
+	width: 40%;
+	height: auto;
+	transform: translateX(95%) translateY(-25%) rotate(-37deg);
+	transition-property: transform, color;
+}
+
+.banner .headlines .headline {
+	font-size: 3.5rem;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgba(255, 255, 255, 0.5);
+	margin: 10px;
+	transition-duration: .5s;
+}
+
+.banner:hover .company-logo {
+	transform: rotate(0deg);
+}
+
+.banner:hover .headlines {
+	transform: translateY(0) rotate(0);
+	background: rgba(191, 185, 185, 0.5);
+	width: 100%;
+}
+
+.banner:hover .headlines .headline {
+	font-size: 2rem;
+	color: #093a58;
 }
 
 .col {
@@ -148,6 +181,14 @@ img {
 	padding: 1em;
 	border-radius: 5px;
 	margin: 0 .5em .8em;
+	height: 390px;
+	overflow: hidden;
+	transition: height 2s;
+}
+
+.col:hover {
+	height: 900px;
+	transition-duration: 0.2s;
 }
 
 .col .box-title, .col .box-description .pricing {
@@ -177,7 +218,7 @@ img {
 }
 
 .highlighted {
-	box-shadow: 0px 10px 15px #177499;
+	box-shadow: 0px 10px 25px #093a58;
 }
 
 footer {
